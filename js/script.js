@@ -1,8 +1,8 @@
 $(function () {
-const ICON_SECTION = $('.icons-section');
-const SELECTOR = $('#icon-selector');
+const iconSection = $('.icons-section');
+const selector = $('#icon-selector');
 
-const ICONS = [
+const icons = [
   {
     name: 'cat',
     prefix: 'fa-',
@@ -116,41 +116,48 @@ const ICONS = [
     prefix: 'fa-',
     type: 'calavera',
     family: 'fas'
+  },
+  {
+    name: 'democrat',
+    prefix: 'fa-',
+    type: 'calavera',
+    family: 'fas'
   }
 ];
-const TYPE = [
+const type = [
   'animal',
   'vegetable',
   'user',
   'calavera'];
-const COLORS = [
+const colors = [
   '#196781',
   'orange',
   'purple',
   'rgb(207, 68, 68)'
 ];
-// const TYPE_COLORS = zip(TYPE, COLORS);
+
+const typeColors = zip(type, colors);
 
 // CREATE ARRAY CONTAINING EVERY ITEM IN ICONS += ITEM.color
-const COLORED_ICONS = ICONS.map((item) => {
-  const colorSelector = TYPE.indexOf(item.type);
+const coloredIcons = icons.map((item) => {
+  // const colorSelector = TYPE.indexOf(item.type);
   const el = {
     ...item,
-    // color: TYPE_COLORS[item.type]
-    color: COLORS[colorSelector]
+    color: typeColors[item.type]
+    // color: COLORS[colorSelector]
   }
   return el
 })
 
-// PRINT COLORED_ICONS
-ICON_SECTION.html(printIcons(COLORED_ICONS, ICON_SECTION));
+// PRINT coloredIcons
+iconSection.html(printIcons(coloredIcons, iconSection));
 
 // LISTEN CHANGE ON SELECTOR
-SELECTOR.change(function () {
-  // ON CHANGE, PRINT COLORED_ICONS FILTERED BY VALUE
+selector.change(function () {
+  // ON CHANGE, PRINT coloredIcons FILTERED BY VALUE
   const VALUE = $(this).val();
-  const out = printIcons(filterIcons(COLORED_ICONS, VALUE));
-  ICON_SECTION.html(out);
+  const out = printIcons(filterIcons(coloredIcons, VALUE));
+  iconSection.html(out);
 });
 
 
@@ -177,14 +184,36 @@ function printIcons(src) {
 
 function filterIcons(arr, val) {
   // RETURN res (ARRAY) CONTAINING EVERY ITEM IN arr (ARRAY) WITH ['type']==val
-  const res = val ? arr.filter((item) => item['type'] === val) : arr;
+
+    const res = arr.filter((item) => {
+
+      if (!val) {
+
+        return true;
+
+      } else {
+
+        return item.type === val;
+      }
+     
+    });
+
   return res
 }
 
 
+
 // MISC
 function zip(keyArr, valueArr) {
-  // RETURN AN OBJECT FROM TWO ARRAYS
+  /*
+  * Iterates through two arrays (same length, hopefully), and
+  * for item in two arrays:
+  *   return keyArr[index] = valueArr[index]
+  * 
+  * @param keyArr   || array whose items = keys of the returned object
+  * @param valueArr || array whose items = values of the returned object
+  * @ return        || new object
+  */
   const result = {};
   keyArr.forEach((item, index) => result[item] = valueArr[index]);
   return result
