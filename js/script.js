@@ -183,7 +183,15 @@ function printIcons(src) {
 }
 
 function filterIcons(arr, val) {
-  // RETURN res (ARRAY) CONTAINING EVERY ITEM IN arr (ARRAY) WITH ['type']==val
+  /*
+  * Filter an array of objects, return a new array containing
+  * only the items of the original array with type === val.
+  * If val is empy/undefined/etc, return the original array.
+  * 
+  * @param arr || array of objects
+  * @param val || filtering criteria
+  * @return    || filtered array
+  */
 
     const res = arr.filter((item) => {
 
@@ -212,7 +220,7 @@ function zip(keyArr, valueArr) {
   * 
   * @param keyArr   || array whose items = keys of the returned object
   * @param valueArr || array whose items = values of the returned object
-  * @ return        || new object
+  * @return         || new object
   */
   const result = {};
   keyArr.forEach((item, index) => result[item] = valueArr[index]);
