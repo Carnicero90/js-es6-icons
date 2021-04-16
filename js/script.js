@@ -165,7 +165,7 @@ function filterIcons(arr, val) {
 // MISC
 function zip(keyArr, valueArr) {
   // RETURN AN OBJECT FROM TWO ARRAYS
-  result = {};
+  const result = {};
   keyArr.forEach((item, index) => result[item] = valueArr[index]);
   return result
 }
