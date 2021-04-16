@@ -1,0 +1,50 @@
+/* COMMON
+   ======================= */
+.container {
+   width: 85%;
+   max-width: 1200px;
+   min-width: 450px;
+   margin: auto;
+}
+/* ======================= */
+
+/* MACRO LAYOUT
+   ======================= */
+
+/* ======================= */
+
+/* MICRO LAYOUT
+   ======================= */
+/* header
+********** */
+.logo {
+   width: 100px;
+}
+
+/* ********** */
+/* main
+   ********** */
+.icons-section {
+   background-color: blue;
+   padding-top: 20px;
+   padding-bottom: 20px;
+}
+.icon {
+   border-radius: 5px;
+   width: calc(20% - 30px);
+   height: 100px;
+   background: white;
+   text-align: center;
+}
+.icon span {
+   text-transform: uppercase;
+}
+/* ********** */
+/* ======================= */
+
+
+/* template
+   ********** */
+
+
+/* ********** */
