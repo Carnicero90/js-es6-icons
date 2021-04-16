@@ -104,6 +104,18 @@ const ICONS = [
     prefix: 'fa-',
     type: 'calavera',
     family: 'fas'
+  },
+  {
+    name: 'radiation',
+    prefix: 'fa-',
+    type: 'calavera',
+    family: 'fas'
+  },
+  {
+    name: 'hat-wizard',
+    prefix: 'fa-',
+    type: 'calavera',
+    family: 'fas'
   }
 ];
 const TYPE = [
@@ -115,7 +127,7 @@ const COLORS = [
   '#196781',
   'orange',
   'purple',
-  'black'
+  'rgb(207, 68, 68)'
 ];
 // const TYPE_COLORS = zip(TYPE, COLORS);
 
