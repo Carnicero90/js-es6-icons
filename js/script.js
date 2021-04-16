@@ -144,8 +144,10 @@ function printIcons(src) {
 
     const output = `
   <div class="icon flexer col center center-cross">
+  <a href="https://fontawesome.com/icons/${name}?style=solid" class="flexer col center center-cross">
     <i class="${family} ${prefix}${name}" style="color: ${color}"></i>
     <span>${name}</span>
+    </a>
   </div>`;
 
     out += output;
