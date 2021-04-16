@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/my_frame.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
@@ -13,14 +15,18 @@
 
 <body>
     <!-- HEADER -->
-    <header class="container">
-        <img src="img/logo.png" alt="logo" class="logo">
+    <header>
+        <div class="container">
+
+            <img src="img/logo.png" alt="logo" class="logo">
+
+        </div>
     </header>
     <!-- END HEADER -->
 
     <!-- MAIN -->
-    <main>
-        <section class="flexer center">
+    <main class="flexer col">
+        <section class="selector flexer center">
             <label for="icon-selector">FILTRA PER TIPO</label>
             <select name="icon-selector" id="icon-selector">
                 <option value="">all</option>
@@ -31,7 +37,15 @@
 
         </section>
 
-        <section class="icons-section flexer wrap between">
+        <section class="container">
+            <div class="icons-section flexer wrap between">
+
+            </div>
+ 
+            <!-- <div class="icon flexer col center center-cross">
+                <i class="${family} ${prefix}${name}" style="color: ${color}"></i>
+                <span>${name}</span>
+              </div>` -->
         </section>
 
 
