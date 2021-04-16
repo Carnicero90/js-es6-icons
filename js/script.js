@@ -98,16 +98,24 @@ const ICONS = [
     prefix: 'fa-',
     type: 'user',
     family: 'fas'
+  },
+  {
+    name: 'skull',
+    prefix: 'fa-',
+    type: 'calavera',
+    family: 'fas'
   }
 ];
 const TYPE = [
   'animal',
   'vegetable',
-  'user'];
+  'user',
+  'calavera'];
 const COLORS = [
   '#196781',
   'orange',
   'purple',
+  'black'
 ];
 // const TYPE_COLORS = zip(TYPE, COLORS);
 
