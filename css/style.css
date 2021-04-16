@@ -69,6 +69,11 @@
    text-transform: uppercase;
    font-size: 80%;
 }
+
+.icon:hover {
+   filter: saturate(1000%);
+   cursor: pointer;
+}
 /* ********** */
 /* ======================= */
 

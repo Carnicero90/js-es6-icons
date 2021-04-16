@@ -105,7 +105,7 @@ const TYPE = [
   'vegetable',
   'user'];
 const COLORS = [
-  'blue',
+  '#196781',
   'orange',
   'purple',
 ];
