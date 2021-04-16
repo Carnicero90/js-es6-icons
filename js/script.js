@@ -1,5 +1,4 @@
-// $(document).ready()
-// $(function () {
+$(function () {
 const ICON_SECTION = $('.icons-section');
 const SELECTOR = $('#icon-selector');
 
@@ -111,19 +110,24 @@ const COLORS = [
   'purple',
 ];
 const TYPE_COLORS = zip(TYPE, COLORS);
+
+// CREATE ARRAY CONTAINING EVERY ITEM IN ICONS += ITEM.color
 const COLORED_ICONS = ICONS.map((item) => {
+  const colorSelector = TYPE.indexOf(item.type);
   const el = {
     ...item,
-    color: TYPE_COLORS[item.type]
+    // color: TYPE_COLORS[item.type]
+    color: COLORS[colorSelector]
   }
-
   return el
 })
 
+// PRINT COLORED_ICONS
 ICON_SECTION.html(printIcons(COLORED_ICONS, ICON_SECTION));
 
+// LISTEN CHANGE ON SELECTOR
 SELECTOR.change(function () {
-  
+  // ON CHANGE, PRINT COLORED_ICONS FILTERED BY VALUE
   const VALUE = $(this).val();
   const out = printIcons(filterIcons(COLORED_ICONS, VALUE));
   ICON_SECTION.html(out);
@@ -133,7 +137,7 @@ SELECTOR.change(function () {
 /* ----- FUNCTIONS ----- */
 
 function printIcons(src) {
-
+  // RETURN A FORMATTED STRING FROM src (ARRAY OF OBJECTS)
   let out = "";
   src.forEach((item) => {
     const { family, name, prefix, color } = item;
@@ -151,6 +155,7 @@ function printIcons(src) {
 }
 
 function filterIcons(arr, val) {
+  // RETURN res (ARRAY) CONTAINING EVERY ITEM IN arr (ARRAY) WITH ['type']==val
   const res = val ? arr.filter((item) => item['type'] === val) : arr;
   return res
 }
@@ -164,10 +169,4 @@ function zip(keyArr, valueArr) {
   return result
 }
 
-
-// });
-
-
-
-
-// $('main').html(catTemplate("cat", "cat"))
+});
