@@ -1,98 +1,112 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 /* COMMON
    ======================= */
-.container {
-   width: 85%;
-   max-width: 1200px;
-   margin: auto;
-}
-
-/* ======================= */
-
-/* MACRO LAYOUT
-   ======================= */
-   header {
-      padding-top: 30px;
-      background-color: white;
-   }
-   body {
-      font-family: 'Roboto', sans-serif;
-      font-weight: 500;
-      min-width: 450px;
-
-      background-color: #dddddd;
-
-   }
-
-/* ======================= */
-
-/* MICRO LAYOUT
-   ======================= */
-/* header
-********** */
-.logo {
-   width: 150px;
-}
-
-/* ********** */
-/* main
-   ********** */
-.selector {
-   background-color: #29b1dd;
-   color: white;
-   padding-top: 30px;
-   padding-bottom: 30px;
-   font-size: 120%;
-   vertical-align: middle;
-}
-.selector select {
-   font-size: 50%;
-   margin-left: 15px;
-}
-.icons-section {
-   background-color: #dddddd;
-   padding-top: 20px;
-   padding-bottom: 20px;
-}
-.icon {
-   border-radius: 15px;
-   width: calc(20% - 15px);
-   height: 100px;
-   background: white;
-   text-align: center;
-   margin-bottom: 50px;
-   box-shadow: 2px 2px 2px gray;
-   transition: transform 0.5s;
-}
-.icon i {
-   font-size: 2rem;
-   padding-bottom: 0.8rem;
-}
-.icon span {
-   text-transform: uppercase;
-   font-size: 80%;
-}
-
-.icon:hover {
-   filter: saturate(1000%);
-   cursor: pointer;
-   transform: scale(1.1);
-}
-/* ********** */
-/* ======================= */
-
-/* QUERIES */
-@media screen and (max-width: 600px) {
-   .icon {
-      width: 40%;
-   }
-  .logo {
+   .container {
+      width: 85%;
+      max-width: 1200px;
       margin: auto;
    }
-}
-
-/* template
+   
+   /* ======================= */
+   
+   /* MACRO LAYOUT
+      ======================= */
+      header {
+         padding-top: 30px;
+         background-color: white;
+      }
+      body {
+         font-family: 'Roboto', sans-serif;
+         font-weight: 500;
+         min-width: 450px;
+   
+         background-color: #dddddd;
+   
+      }
+   
+   /* ======================= */
+   
+   /* MICRO LAYOUT
+      ======================= */
+   /* header
    ********** */
-
-
-/* ********** */
-
+   .logo {
+      width: 150px;
+   }
+   
+   /* ********** */
+   /* main
+      ********** */
+   .selector {
+      background-color: #29b1dd;
+      color: white;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      font-size: 120%;
+      vertical-align: middle;
+   }
+   .selector select {
+      font-size: 50%;
+      margin-left: 15px;
+   }
+   .icons-section {
+      background-color: #dddddd;
+      padding-top: 20px;
+      padding-bottom: 20px;
+   }
+   .icon {
+      border-radius: 15px;
+      width: calc(20% - 15px);
+      height: 100px;
+      background: white;
+      text-align: center;
+      margin-bottom: 50px;
+      -webkit-box-shadow: 2px 2px 2px gray;
+              box-shadow: 2px 2px 2px gray;
+      -webkit-transition: -webkit-transform 0.5s;
+      transition: -webkit-transform 0.5s;
+      -o-transition: transform 0.5s;
+      transition: transform 0.5s;
+      transition: transform 0.5s, -webkit-transform 0.5s;
+   }
+   .icon i {
+      font-size: 2rem;
+      padding-bottom: 0.8rem;
+   }
+   .icon span {
+      text-transform: uppercase;
+      font-size: 80%;
+   }
+   
+   .icon:hover {
+      -webkit-filter: saturate(1000%);
+              filter: saturate(1000%);
+      cursor: pointer;
+      -webkit-transform: scale(1.1);
+          -ms-transform: scale(1.1);
+              transform: scale(1.1);
+   }
+   /* ********** */
+   /* ======================= */
+   
+   /* QUERIES */
+   @media screen and (max-width: 600px) {
+      .icon {
+         width: 40%;
+      }
+     .logo {
+         margin: auto;
+      }
+   }
+   
+   /* template
+      ********** */
+   
+   
+   /* ********** */
