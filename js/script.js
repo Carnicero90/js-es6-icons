@@ -109,7 +109,7 @@ const COLORS = [
   'orange',
   'purple',
 ];
-const TYPE_COLORS = zip(TYPE, COLORS);
+// const TYPE_COLORS = zip(TYPE, COLORS);
 
 // CREATE ARRAY CONTAINING EVERY ITEM IN ICONS += ITEM.color
 const COLORED_ICONS = ICONS.map((item) => {
